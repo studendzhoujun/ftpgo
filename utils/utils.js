@@ -30,11 +30,11 @@ function getFilesInfo(filePath) {
 }
 
 function getSftpConfig() {
-  const sftpPath = path.join(process.cwd(), "./sftp.json");
+  const sftpPath = path.join(process.cwd(), "./ftpconfig.json");
   if (fs.existsSync(sftpPath)) {
     return JSON.parse(fs.readFileSync(sftpPath, "utf-8"));
   } else {
-    throw new Error("当前目录下未找到 sftp.json 文件!");
+    throw new Error("当前目录下未找到 ftpconfig.json 文件!");
   }
 }
 
